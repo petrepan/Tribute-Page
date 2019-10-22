@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    background-color: #4e4b4b54;
+    line-height: 30px;
+    text-align: center;
+    color: #7c7979;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 40% 45%;
+    grid-template-areas: 
+     'header header header'
+     'main main main'
+     'footer footer footer';
+}
+nav{
+    
+    padding-right:30px;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+    flex-grow: 3;
+    
+}
+header{
+    background-color: #0e0d0d;
+    grid-area: header;
+    
+}
+main{
+    grid-area: main;
+   
+   
+    
+   
+}
+footer{
+    background-color: #0e0d0d;
+    grid-area: footer;
+}
+#my-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 90px;
+    height: 10vh;
+}
+nav ul{
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+nav ul li{
+    list-style-type: none;
+    padding: 20px;
+   
+}
+nav ul a{
+    text-decoration: none;
+    color: #7c7979;
+    font-weight: 600;
+    padding:5px;
+    border-radius:5px ;
+    box-shadow: 0 1px 5px  #221369;
+}
+nav ul li a:hover{
+    color: #221369;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+  }
+#main{
+    background-color: rgb(248, 246, 246);
+    margin: 6.5px;
+    padding: 35px;
+    border-radius: 7px;
+    border-right: #221369 solid 2.5px;
+    border-left: #221369 solid 2.5px;
+    color: rgb(31, 29, 29);
+}
+.btn{
+    border-radius: 7px;
+    padding:5px;
+    color: #221369;
+    border: none;
+}
+::placeholder { 
+    color: #221369;
+    opacity: 1;
+  }
+  h1{
+    font-weight: 700;
+    cursor: pointer;
+  }
+  h2, h3, p {
+      padding: 8px;
+  }
+  .burger div{
+      height: 3px;
+      width: 25px;
+      background-color: #7c7979;
+      margin: 5px;
+  }
+  .burger{
+      display: none;
+  }
+  @media (max-width:900px){
+      body{
+         overflow-x: hidden;
+      }
+      .burger{
+          display: block;
+          cursor: pointer;
+      }
+   form{
+       display: none;
+   }
+   .nav{
+       height: 80vh;
+       width: 40%;
+       background-color:#7c7979;
+       position: absolute;
+       right: 0;
+       top: 10vh;
+       transform: translateX(100%);  
+       transition: transform 0.6s ease-in;
+       
+   }
+   nav ul{
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+   nav li a{
+       color: #0e0d0d;
+   }
+   .nav-act{
+       transform: translateX(0%);
+   }
+  }
